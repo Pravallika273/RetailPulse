@@ -1,0 +1,13 @@
+Category,Issue,Count,Percentage,Business_Impact
+Dataset,Raw transaction records,541909.0,100.0,Baseline transaction volume
+Data Quality,Exact duplicate records,5268.0,0.9721189350979592,Can inflate transaction-level reporting
+Data Quality,Missing product descriptions,1454.0,0.2683107311375157,Reduces product-level reporting quality
+Data Quality,Missing customer IDs,135080.0,24.926694334288598,Prevents customer-level attribution
+Business Exception,Negative quantities,10624.0,1.9604767590130447,Likely represents returns/cancellations
+Data Quality,Zero unit prices,2515.0,0.4641000610803659,Transactions contribute no positive sales value
+Data Quality,Negative unit prices,2.0,0.0003690656549346846,Requires investigation before sales reporting
+Business Exception,Cancellation invoices,9288.0,1.7139409015166756,Should not be treated as normal sales
+Pipeline,Records after duplicate removal,536641.0,99.02788106490205,Clean transaction base
+Pipeline,Valid sales records,524878.0,96.8572214154037,Primary dataset for sales analytics
+Business KPI,Valid sales revenue,10642110.804000001,,Primary revenue baseline
+Business KPI,Valid sales invoices,19962.0,,Primary order-count baseline
